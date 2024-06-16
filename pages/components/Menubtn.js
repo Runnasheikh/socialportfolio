@@ -1,0 +1,19 @@
+import React, { useContext } from 'react'
+import { Navcontext } from './context/Navcontext'
+
+const Menubtn = () => {
+    const {setIsOpen} = useContext(Navcontext)
+  return (
+    <div
+    onClick={()=>setIsOpen(true)}
+     className='group flex flex-col gap-y-2 cursor-pointer
+    xl:hidden group items-end '>
+      <div className="w-7 h-[2px] bg-white transition-all"></div>
+      <div className="w-4 group-hover:w-7 h-[2px] bg-white transition-all"></div>
+      <div className="w-7 h-[2px] bg-white transition-all"></div>
+
+    </div>
+  )
+}
+
+export default Menubtn
