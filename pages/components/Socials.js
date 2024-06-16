@@ -10,19 +10,19 @@ import {
 const socials = [
     {
         icon: <RiYoutubeFill />,
-        path: 'https://www.youtube.com/channel/UCY2_2222'
+        path: 'https://www.facebook.com/scjhaofficial'
     },
     {
         icon: <RiInstagramFill />,
-        path: 'https://www.instagram.com/atifsheikh9?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+        path: 'https://www.instagram.com/soni_scjhaofficial/'
     },
     {
         icon: <RiSpotifyFill />,
-        path: 'https://www.spotify.com/'
+        path: 'https://open.spotify.com/artist/2j2fBasWl9E4SRsvAWbT8d'
     },
     {
         icon: <RiTwitterFill />,
-        path: 'https://www.twitter.com/'
+        path: 'https://x.com/scjhaofficial'
     }
 ]
 
