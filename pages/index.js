@@ -24,7 +24,7 @@ export default function Home() {
     <main>
       <Hero/>
       <Player/>
-      {/* <Events/> */}
+ 
       <Albumslider/>
       <Youtube/>
       <div className="h-[4000px]"></div>
