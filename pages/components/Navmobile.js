@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Navcontext } from './context/Navcontext'
 import {RiCloseLine} from 'react-icons/ri'
 import Nav from './Nav'
-export const Navmobile = () => {
+const Navmobile = () => {
   const {isOpen,setIsOpen} = useContext(Navcontext)
   return (
    <nav className={
@@ -19,3 +19,4 @@ export const Navmobile = () => {
    </nav>
   )
 }
+export default Navmobile

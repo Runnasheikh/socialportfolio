@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Inter,Alex_Brush,Montserrat } from "next/font/google";
-import Events from "./components/event/Events";
+
 import Hero from "./components/Hero";
 import Player from "./components/Player";
-import Album from "./components/Album";
+
 import Albumslider from "./components/Albumslider";
 import Youtube from "./components/Youtube";
 
