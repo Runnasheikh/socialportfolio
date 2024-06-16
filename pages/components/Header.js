@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { Navmobile } from './Navmobile'
+
 import Nav from './Nav'
 import Menubtn from './Menubtn'
 import Socials from './Socials'
+import Navmobile from './Navmobile'
 const Header = () => {
   const [active,setactive] = useState(false)
   useEffect(()=>{
