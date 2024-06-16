@@ -32,7 +32,7 @@ export default function Youtube() {
   }
 
   return (
-    <div className="container mx-auto py-8 bg-primary">
+    <div className="container mx-auto py-8 bg-primary" id="youtube">
       <h1 className="text-3xl font-semibold mb-4 text-center">YouTube Playlist Videos</h1>
       <div className="flex flex-wrap justify-center gap-6">
         {videos.map((video) => (

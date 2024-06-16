@@ -12,8 +12,8 @@ const link = [
         name: "Tours"
     },
     {
-        path: "discography",
-        name: "Discography"
+        path: "youtube",
+        name: "youtube"
     },
     {
         path: "contact",
