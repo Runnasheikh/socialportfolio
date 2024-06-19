@@ -1,33 +1,34 @@
-import Image from "next/image";
+
 import { Inter,Alex_Brush,Montserrat } from "next/font/google";
 
 import Hero from "./components/Hero";
-import Player from "./components/Player";
 
-import Albumslider from "./components/Albumslider";
+
+
+
+
+import React from "react";
+
 import Youtube from "./components/Youtube";
 
+import PopularVideos from "./Popular";
 
-const alexBrush = Alex_Brush({ 
-  weight:['400'],
-  subsets: ["latin"],
-  variable:'--font-alexBrush'
- });
-const montserrat = Montserrat({ 
-  weight:['100','200', '400','500', '600','700','800'],
-  subsets: ["latin"],
-  variable:'--font-montserrat'
- });
 
 export default function Home() {
+
+
+
+
   return (
     <main>
       <Hero/>
-      <Player/>
- 
-      <Albumslider/>
-      <Youtube/>
-      <div className="h-[4000px]"></div>
+      <PopularVideos/>
+      {/* <Latestvideo/> */}
+     
+   <Youtube/>
+      {/* <Albumslider/> */}
+    
+     
     </main>
   );
 }

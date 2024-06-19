@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body{
-  @apply bg-primary font-montserrat text-white;
+  @apply  font-montserrat text-white;
 }
 .pretitle {
   @apply font-alexBrush text-[42px] text-accent leading-none;

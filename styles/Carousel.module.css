@@ -1,0 +1,23 @@
+/* components/Carousel.module.css */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carouselInner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carouselItem {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carouselItem img {
+    width: 100%;
+    display: block;
+  }
+  

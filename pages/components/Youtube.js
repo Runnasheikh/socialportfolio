@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-const PLAYLIST_ID = process.env.NEXT_PUBLIC_PLAYLIST_ID;
+import Image from "next/image";
+import { timeAgo } from "@/utils/timeAgo";
 
 export default function Youtube() {
   const [videos, setVideos] = useState([]);
   const [error, setError] = useState(null);
+  const [videoId, setVideoId] = useState("e5yE-bc82IM");
 
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await fetch(`/api/youtube?playlistId=${PLAYLIST_ID}&apiKey=${API_KEY}`);
+        const res = await fetch(`/api/youtube`);
         if (!res.ok) {
           throw new Error(
             `Failed to fetch videos: ${res.status} ${res.statusText}`
@@ -32,30 +32,54 @@ export default function Youtube() {
   }
 
   return (
-    <div className="container mx-auto py-8 bg-primary" id="youtube">
-      <h1 className="text-3xl font-semibold mb-4 text-center">YouTube Playlist Videos</h1>
-      <div className="flex flex-wrap justify-center gap-6">
-        {videos.map((video) => (
-          <div
-            key={video.id}
-            className="bg-primary text-white shadow-md rounded-lg p-4 w-full sm:w-[300px] md:w-[350px] lg:w-[400px] cursor-pointer hover:shadow-xl transition duration-300"
-            onClick={() => window.open(`https://www.youtube.com/watch?v=${video.id}`)}
-          >
-            <div className="aspect-w-16 aspect-h-9 mb-4">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${video.id}`}
-                allowFullScreen
-                title={video.title}
-                className="rounded-lg"
-              ></iframe>
-            </div>
-            <h2 className="text-lg font-semibold">{video.title}</h2>
-            <p className="text-sm text-gray-600 mb-2 truncate">{video.description}</p>
-            <p className="text-sm text-gray-500">{new Date(video.publishedAt).toLocaleDateString()}</p>
-          </div>
-        ))}
+    <div className="container mx-auto p-4 flex flex-col lg:flex-row" id="youtube">
+      <div className="flex flex-col lg:w-2/3 relative">
+        <div className="aspect-w-16 aspect-h-9 mb-4 mr-6 relative h-0 pb-9/16">
+          <iframe
+            width="100%"
+            height="500"
+            src={`https://www.youtube.com/embed/${videoId}`}
+            allowFullScreen
+            title="YouTube Video"
+            className="rounded-lg shadow-lg"
+          ></iframe>
+        </div>
+      </div>
+      <div className="lg:w-1/3 lg:h-[500px] overflow-y-auto custom-scroll">
+        <h2 className="text-xl font-semibold mb-4">Recommended Videos</h2>
+        <div className="space-y-4">
+          {videos
+            .slice()
+            .reverse()
+            .map((video, index) => (
+              <div
+                key={video.id}
+                className="flex items-center bg-white p-2 rounded-lg shadow-lg hover:bg-gray-100 transition cursor-pointer"
+                onClick={() => {
+                  setVideoId(video.id);
+                }}
+              >
+                <div className="w-1/3">
+                  <Image
+                    src={video.thumbnail}
+                    alt={video.title}
+                    width={160}
+                    height={90}
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="w-2/3 pl-4">
+                  <h3 className="text-sm font-semibold">{video.title}</h3>
+                  <p className="text-xs text-gray-600 truncate">
+                    {video.description}
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    {timeAgo(video.publishedAt)}
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

@@ -27,10 +27,10 @@ const Header = () => {
       className='relative flex w-[226px] h-[37.64px] transition-all mb-4 xl:mb-0'
       >
         <Image
-          src="/assets/header/logo.svg"
+          src="/assets/header/logo.png"
           alt="logo"
           fill
-          className="object-contain"
+          className="object-contain text-transparent"
         />
       </Link>
       <Nav containerStyles="hidden xl:flex items-center gap-x-8"/>
