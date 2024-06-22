@@ -12,7 +12,7 @@ import React from "react";
 import Youtube from "./components/Youtube";
 
 import PopularVideos from "./Popular";
-import AddPlaylistItemForm from "./components/AddPlaylistItemForm";
+
 import Contact from "./components/Contact";
 
 
@@ -29,7 +29,7 @@ export default function Home() {
       {/* <Latestvideo/> */}
      
    <Youtube/>
-      {/* <Albumslider/> */}
+   
     
      <Contact/>
      {/* <Component/> */}

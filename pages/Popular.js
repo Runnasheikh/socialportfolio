@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Tabs, Tab } from "@nextui-org/tabs";
-import { GalleryIcon } from "./icons/Gallery";
-import { MusicIcon } from "./icons/Music";
-import { VideoIcon } from "./icons/Videoicon";
+
 
 import Player from "./components/Player";
 import Latestvideo from "./components/Latestvideo";
+import { RiGalleryFill } from "react-icons/ri";
+import { Music2Icon } from "lucide-react";
 
 export default function PopularVideos() {
   const [selectedTab, setSelectedTab] = useState("photos");
@@ -31,7 +31,7 @@ export default function PopularVideos() {
           key="photos"
           title={
             <div className="flex items-center space-x-2">
-              <GalleryIcon />
+              <RiGalleryFill />
               <span>latest video</span>
             </div>
           }
@@ -42,7 +42,7 @@ export default function PopularVideos() {
           key="music"
           title={
             <div className="flex items-center space-x-2">
-              <MusicIcon />
+              <Music2Icon />
               <span>Music</span>
             </div>
           }
