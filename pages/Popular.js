@@ -4,8 +4,6 @@ import { GalleryIcon } from "./icons/Gallery";
 import { MusicIcon } from "./icons/Music";
 import { VideoIcon } from "./icons/Videoicon";
 
-import VideoCard from "./components/Latet";
-import videos from "@/data/video";
 import Player from "./components/Player";
 import Latestvideo from "./components/Latestvideo";
 
