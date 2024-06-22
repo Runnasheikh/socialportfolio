@@ -49,7 +49,7 @@ export default function PopularVideos() {
           value="music"
           className="px-4 py-2"
         />
-        <Tab
+        {/* <Tab
           key="videos"
           title={
             <div className="flex items-center space-x-2">
@@ -59,7 +59,7 @@ export default function PopularVideos() {
           }
           value="videos"
           className="px-4 py-2"
-        />
+        /> */}
       </Tabs>
 
       {/* Content based on selected tab */}
@@ -68,7 +68,7 @@ export default function PopularVideos() {
           <div className="flex flex-col items-center justify-center w-full max-w-lg mx-auto mt-8 text-black rounded-xl opacity-100 transition-opacity duration-500">
             <h2 className="text-2xl font-bold mb-4">Photos</h2>
             <div className="flex flex-col items-center justify-center w-full max-w-lg mx-auto mt-8 text-black rounded-xl">
-              Your Photos content goes here.
+            <Latestvideo/>
             </div>
           </div>
         )}
@@ -77,10 +77,10 @@ export default function PopularVideos() {
             <Player/>
           </div>
         )}
-        {selectedTab === "videos" && (
+        {/* {selectedTab === "videos" && (
 <Latestvideo/>
       
-        )}
+        )} */}
       </div>
     </div>
   );

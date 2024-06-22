@@ -16,6 +16,7 @@ import AddPlaylistItemForm from "./components/AddPlaylistItemForm";
 import Contact from "./components/Contact";
 
 
+
 export default function Home() {
 
 
@@ -31,6 +32,8 @@ export default function Home() {
       {/* <Albumslider/> */}
     
      <Contact/>
+     {/* <Component/> */}
+     {/* <AddPlaylistItemForm/> */}
     </main>
   );
 }

@@ -54,7 +54,7 @@ const Hero = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
             data-carousel-item
           >
-            <img src={src} className="block w-full h-full  object-top" alt={`Slide ${index + 1}`} />
+            <Image width={200} src={src} className="block w-full h-full  object-top" alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </div>
