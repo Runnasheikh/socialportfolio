@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoIcon = (props) => (
+export const VideoIcon = (props) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -17,5 +17,3 @@ const VideoIcon = (props) => (
     <path d="M7.76891 2C4.66891 2.01 2.63891 3.61 2.12891 6.36H7.76891V2Z" fill="currentColor" />
   </svg>
 );
-
-export default VideoIcon;
