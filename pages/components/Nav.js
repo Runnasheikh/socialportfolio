@@ -1,16 +1,11 @@
 import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive'
 import { Link as ScrollLink } from 'react-scroll'
+import About from './Aboutus'
 
 const link = [
-    {
-        path: "home",
-        name: "Home"
-    },
-    {
-        path: "tours",
-        name: "Tours"
-    },
+  
+    
     {
         path: "youtube",
         name: "youtube"
@@ -27,6 +22,9 @@ const Nav = ({ containerStyles, linkStyles }) => {
     })
   return (
     <nav className={`${containerStyles}`}>
+        <div>
+            <Link href={'/'}>Home</Link>
+        </div>
         {
             link.map((link, index) => {
                 return (
@@ -41,10 +39,14 @@ const Nav = ({ containerStyles, linkStyles }) => {
                       duration={500}
                     >
                         {link.name}
+                        
                     </ScrollLink>
                 )
             })
         }
+        <div>
+           <Link href={'/components/Aboutus'}>About us</Link>
+        </div>
     </nav>
   )
 }
