@@ -18,10 +18,20 @@ const locationSequence = [
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    'https://i.pinimg.com/564x/1e/b2/15/1eb2158aff0362eeb8fa233ee55b4bb8.jpg',
-    'https://i.pinimg.com/564x/58/68/f0/5868f0775199a1f4e84159c194a9feab.jpg',
-    'https://i.pinimg.com/564x/94/6c/b6/946cb6847fcbbd0046fe48ae9cd9f125.jpg',
-    'https://i.pinimg.com/564x/dc/1c/8c/dc1c8c0592e83a0c013d7a9b9ea443a4.jpg'
+    'jha/jha1.jpg',
+    'jha/jha2.jpg',
+    'jha/jha3.JPG',
+    'jha/jha4.jpg',
+    'jha/jha5.png',
+    'jha/jha6.jpg',
+    'jha/jha7.JPG',
+    'jha/jha8.jpg',
+    'jha/jha9.jpg',
+    'jha/jha10.jpg',
+    'jha/jha11.JPG',
+    'jha/jha12.jpg',
+    'jha/jha13.jpg',
+
   ];
 
   useEffect(() => {
