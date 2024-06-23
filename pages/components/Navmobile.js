@@ -7,7 +7,7 @@ const Navmobile = () => {
   const { isOpen, setIsOpen } = useContext(Navcontext);
   return (
     <nav
-      className={`${isOpen ? 'right-0' : '-right-full'} xl:hidden fixed bg-primary w-full top-0 z-20 bottom-0 transition-all duration-500`}
+      className={`${isOpen ? 'right-0' : '-right-1/2'} xl:hidden fixed bg-primary w-1/2 top-0 z-20 bottom-0 transition-all duration-500`}
     >
       <div
         className="absolute right-4 top-5 cursor-pointer"

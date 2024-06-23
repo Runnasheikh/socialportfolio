@@ -13,7 +13,7 @@ const Hero = () => {
     '/jha/jha7.JPG',
     '/jha/jha8.jpg',
     '/jha/jha9.jpg',
-    '/jha/jha10.jpg',
+    // '/jha/jha10.jpg',
     '/jha/jha11.JPG',
     '/jha/jha12.jpg',
     '/jha/jha13.jpg',
