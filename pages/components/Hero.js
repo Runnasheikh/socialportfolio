@@ -1,43 +1,28 @@
-import React from 'react'
-import Image from 'next/image'
-import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse'
-import { fadeIn } from '../../variants'
-import { motion } from 'framer-motion'
-import { TypeAnimation } from 'react-type-animation'
-import { useState,useEffect } from 'react'
-
-const locationSequence = [
-    'los angeles ,usa',
-    3000,
-    'paris angeles, usa',
-    3000,
-    'bermin angeles, usa',
-    3000
-]
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    'jha/jha1.jpg',
-    'jha/jha2.jpg',
-    'jha/jha3.JPG',
-    'jha/jha4.jpg',
-    'jha/jha5.png',
-    'jha/jha6.jpg',
-    'jha/jha7.JPG',
-    'jha/jha8.jpg',
-    'jha/jha9.jpg',
-    'jha/jha10.jpg',
-    'jha/jha11.JPG',
-    'jha/jha12.jpg',
-    'jha/jha13.jpg',
-
+    '/jha/jha1.jpg',
+    '/jha/jha2.jpg',
+    '/jha/jha3.JPG',
+    '/jha/jha4.jpg',
+    '/jha/jha5.png',
+    '/jha/jha6.jpg',
+    '/jha/jha7.JPG',
+    '/jha/jha8.jpg',
+    '/jha/jha9.jpg',
+    '/jha/jha10.jpg',
+    '/jha/jha11.JPG',
+    '/jha/jha12.jpg',
+    '/jha/jha13.jpg',
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // 10000 milliseconds = 10 seconds
+    }, 5000); // 5000 milliseconds = 5 seconds
 
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [images.length]);
@@ -55,8 +40,9 @@ const Hero = () => {
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
+
   return (
-    <div className="relative w-full h-screen flex justify-center items-center">
+    <div className="relative w-full h-[calc(100vh+30px)] flex justify-center items-center">
       <div className="relative w-full h-full overflow-hidden">
         {images.map((src, index) => (
           <div
@@ -64,7 +50,14 @@ const Hero = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
             data-carousel-item
           >
-            <img src={src} className="block w-full h-full  object-top" alt={`Slide ${index + 1}`} />
+            <Image
+              src={src}
+              alt={`Slide ${index + 1}`}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="top"
+              className="custom-object-position w-full h-full"
+            />
           </div>
         ))}
       </div>
@@ -80,9 +73,8 @@ const Hero = () => {
           />
         ))}
       </div>
-      
     </div>
   );
 };
 
-export default Hero
+export default Hero;
