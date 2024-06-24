@@ -1,16 +1,14 @@
-// backend - /api/youtube.js
-import { promises as fs } from "fs";
+// pages/api/youtube.js
+import dbConnect from '../../lib/dbConnect';
+import PlaylistItem from '../../models/PlaylistItem';
 
 export default async function handler(req, res) {
   try {
-    const file = await fs.readFile(
-      process.cwd() + "/data/playlist.json",
-      "utf8"
-    );
-    const data = JSON.parse(file);
+    await dbConnect();
+    
+    const data = await PlaylistItem.find({});
 
-    const videos = data.items.map((item) => ({
-      id: item.snippet.resourceId.videoId,
+    const videos = data.map((item) => ({
       title: item.snippet.title,
       description: item.snippet.description,
       publishedAt: item.snippet.publishedAt,
